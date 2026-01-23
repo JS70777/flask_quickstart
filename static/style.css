@@ -1,25 +1,64 @@
 div {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
+
 #subteams {
-  margin: 10px;
+  margin: 10px 10px 10px 20px;
 }
+
 span {
-  font-size: 20px;
+    font-size: 20px;
+  width: 200px;
 }
+
 #sub {
-  font-size: 20px;
-  font-weight: 550;
-  margin: 0;
+    font-size: 20px;
+    font-weight: 550;
+    margin: 0;
 }
+
 #Teams {
-  font-size: 22px;
-  font-weight: 575;
+    font-size: 22px;
+    font-weight: 575;
 }
+
 button {
-  width: 100px;
+    width: 100px;
+  font-family: "Times New Roman", serif;
 }
+
 #TeamsBut {
-  width: 250px;
+    width: 250px;
+}
+
+/* Target ANY element that has a data-description attribute */
+[data-description] {
+  position: relative;
+  cursor: help;
+}
+
+/* Tooltip appearance on hover for both span and button */
+[data-description]:hover::after {
+
+  content: attr(data-description); /* Pulls lore from the attribute */
+  position: relative;
+  bottom: 125%; /* Position above the element */
+  left: 50%;
+  transform: translateX(-50%);
+  background: #222;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-size: 14px;
+  white-space: normal;
+  width: 180px; /* Limits width so long lore wraps */
+  z-index: 100;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  pointer-events: none; /* Prevents tooltip from flickering on hover */
+}
+
+
+body {
+  margin-left: 20px;
 }

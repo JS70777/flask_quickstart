@@ -3,25 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello World</title>
+    <title>FRC</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <script defer src="{{ url_for('static', filename='script.js') }}"></script>
 </head>
 <body>
-    <header>
-  <h1>Farming Robots Competition</h1>
+<header>
+    <h1>Farming Robots Competition</h1>
 </header>
 <div id=resources>
-  <span id=Teams></span>
-  <div id=subteams>
-    <p id=sub>Subteam members:</p>
-    <span id=Design></span>
-    <span id=Fabrication></span>
-    <span id=Electronics></span>
-    <span id=Programming></span>
-    <span id=Operations></span>
-  </div>
-  <span id=Robots></span>
+    <span id=Teams></span>
+    <div id=subteams>
+        <p id=sub>Subteam members:</p>
+        <span id=Design></span>
+        <span id=Fabrication></span>
+        <span id=Electronics></span>
+        <span id=Programming></span>
+        <span id=Operations></span>
+    </div>
+    <span id=Robots></span>
 </div>
 <label>Robot Progress:</label>
 <progress id="prog" max=100 value=0></progress>
