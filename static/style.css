@@ -1,23 +1,25 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+div {
+  display: flex;
+  flex-direction: column;
 }
-
-body {
-    font-family: Arial, sans-serif;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f0f0f0;
+#subteams {
+  margin: 10px;
 }
-
-.container {
-    text-align: center;
+span {
+  font-size: 20px;
 }
-
-h1 {
-    color: #333;
-    font-size: 3rem;
+#sub {
+  font-size: 20px;
+  font-weight: 550;
+  margin: 0;
+}
+#Teams {
+  font-size: 22px;
+  font-weight: 575;
+}
+button {
+  width: 100px;
+}
+#TeamsBut {
+  width: 250px;
 }
