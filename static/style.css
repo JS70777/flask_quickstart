@@ -9,7 +9,7 @@ div {
 
 span {
     font-size: 20px;
-  width: 200px;
+  width: 170px;
 }
 
 #sub {
@@ -42,23 +42,28 @@ button {
 [data-description]:hover::after {
 
   content: attr(data-description); /* Pulls lore from the attribute */
-  position: relative;
-  bottom: 125%; /* Position above the element */
-  left: 50%;
-  transform: translateX(-50%);
+  position: absolute;
+  /* NEW POSITIONING: Anchor to the right side */
+  left: 105%; /* Start just past the right edge of the element */
+  top: 50%; /* Align vertically with the middle of the element */
+  transform: translateY(-50%); /* Center it vertically */
   background: #222;
   color: #fff;
   padding: 8px 12px;
   border-radius: 5px;
   font-size: 14px;
   white-space: normal;
-  width: 180px; /* Limits width so long lore wraps */
+  width: 220px; /* Limits width so long lore wraps */
   z-index: 100;
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
   pointer-events: none; /* Prevents tooltip from flickering on hover */
+    max-width: 90vw;
 }
-
 
 body {
   margin-left: 20px;
+}
+
+footer {
+    margin: 400px;
 }

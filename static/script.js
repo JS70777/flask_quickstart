@@ -65,14 +65,28 @@ function getAsInt(name) {
 }
 
 function updateRobotProgress() {
+    // 1. Logarithmic Base (Electronics > Design initial advantage)
+  // Electronics coefficient reduced significantly for steep early growth
+  const electronicsContribution = Math.log2(getAsInt("Electronics") + 1) / 10.0; // Higher weight
+
+  // Design coefficient is steeper than the original 12.5 but less than Electronics
+  const designContribution = Math.log(getAsInt("Design") + 1) / 5.0;
+
+  // 2. Linear Production (Fabrication == Programming average output)
+  // Fabrication coefficient set to 1/20 = 0.05
+  const fabContribution = getAsInt("Fabrication") / 20.0;
+
+  // Programming coefficient adjusted so average (0.5 * Programming) / 10.0 = 0.05
+  const progContribution = (getAsInt("Programming") * Math.random()) / 10.0;
+
+  // 3. Multipliers (Scale everything)
+  const opMultiplier = 1 + (getAsInt("Operations") - 1) / 5.0;
+
+  let increment = (electronicsContribution + designContribution + fabContribution + progContribution)
+                  * opMultiplier * getAsInt("Teams");
     let val =
         Number(prog.value) +
-        (Math.log2(getAsInt("Design") + 1) / 12.5 +
-            getAsInt("Fabrication") / 25.0 +
-            Math.log(getAsInt("Electronics") + 1) / Math.log(1.04) / 200.0 +
-            (getAsInt("Programming") * Math.random()) / 15) *
-        (1 + (getAsInt("Operations") - 1) / 5.0) *
-        getAsInt("Teams");
+        increment;
     if (val >= 100) {
         val = 0;
         resources.get("Robots").change(1);
