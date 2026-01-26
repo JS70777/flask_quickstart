@@ -1,0 +1,54 @@
+body {
+  font-family: Lato;
+}
+div {
+  display: flex;
+}
+#signature {
+  display: flex;
+  justify-content: space-between;
+}
+#prog {
+  flex-grow: 5;
+}
+.down {
+  flex-direction: column;
+}
+h1 {
+  font-size: 28px;
+  font-weight: 500;
+  margin: 0px;
+}
+#name {
+  font-weight: 300;
+}
+p {
+  font-size: 16px;
+}
+#progress {
+  margin: 3px;
+}
+#date {
+  font-weight: bold;
+  margin: 0px;
+  font-size: 14px;
+}
+#next {
+  color: #047635;
+  font-weight: 550;
+  margin: 0px;
+}
+#comment {
+  background: #f5f5f5;
+  border-style: solid;
+  border-color: #d7dade;
+  margin: 5px;
+  border-radius: 3px;
+}
+select {
+  font-size: 18px;
+  width: 250px;
+}
+svg {
+  margin: 2px;
+}

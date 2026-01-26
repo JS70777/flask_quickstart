@@ -1,0 +1,139 @@
+body {
+    font-family: lato, helvetica, serif;
+}
+div {
+  display: flex;
+  flex-direction: column;
+}
+#head {
+  background-color: #346281;
+}
+#welcome {
+  background-color: #F5F5F5;
+}
+#date {
+  background-color: #346281;
+}
+.subhead {
+  align-items: center;
+}
+.doub {
+  flex-flow: row wrap;
+  gap: 35%;
+}
+.gray {
+  background-color: #F5F5F5;
+}
+img {
+  width: 70%;
+}
+h1 {
+  font-size: 30px;
+  font-weight: normal;
+  color: white;
+}
+h2 {
+  font-size: 24px;
+  color: #346281;
+  width: min(200px);
+}
+#links {
+  width: 45%;
+  justify-content: center;
+}
+#cnc {
+  color: #343A40;
+}
+#unit {
+  width: 20%;
+  color: white;
+  font-weight: normal;
+}
+#tests {
+  color: #1C8536;
+}
+h3 {
+  font-size: 18px;
+  color: #346281;
+}
+#domain {
+  color: black;
+  font-weight: normal;
+  background-color: #FF7F29;
+}
+h4 {
+  font-size: 18.67px;
+  color: #274E13;
+  font-weight: normal;
+}
+#location {
+  color: black;
+}
+p {
+  font-size: 16px;
+  width: min(350px);
+}
+#greet {
+  font-size: 21px;
+}
+
+
+.lato-thin {
+  font-family: "Lato", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.lato-light {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.lato-regular {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.lato-bold {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.lato-black {
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.lato-thin-italic {
+  font-family: "Lato", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.lato-light-italic {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.lato-regular-italic {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.lato-bold-italic {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.lato-black-italic {
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
