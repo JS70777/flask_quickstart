@@ -116,10 +116,11 @@ function gameLoop() {
         resources
             .get("Teams")
             .obj.insertAdjacentHTML(
-            "afterend",
+            "beforeend",
             '<button id=TeamsBut>"We\'re building a team, not a robot"</button>'
         );
         const teamsBut = document.getElementById("TeamsBut");
+        teamsBut.setAttribute('data-description', res["Teams"] || "");
         const buttonPress = (e) => {
             resources.forEach((val, key, map) => {
                 switch (val.name) {
@@ -138,7 +139,7 @@ function gameLoop() {
         teamsBut.addEventListener("click", buttonPress);
     }
 }
-
+document.getElementById("prog").setAttribute('data-description', res["Robots"])
 // Update text 10 times per second instead of 60 for performance
 setInterval(() => {
     resources.forEach(v => v.update());
