@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Middle Field - </title>
+    <script>document.title += " "+new URLSearchParams(window.location.search).get("room")</script>
+</head>
+<body>
+<map name="screen">
+    <area id="toClick"
+            shape="rect"
+            href="middlefield?room="
+            alt="Middle Field - "/>
+    <script>
+        const rng = (n)=>Math.floor(Math.random() * (n+1));
+        const area = document.getElementById("toClick");
+        area.coords = `${rng(900)},${rng(527)},${rng(900)},${rng(527)}`;
+        area.href += parseInt(new URLSearchParams(window.location.search).get("room")) + 1;
+    </script>
+</map>
+<img
+        usemap="#screen"
+        src="https://wallpapers.com/images/featured-full/blank-white-background-xbsfzsltjksfompa.jpg"
+        alt="screen"/>
+</body>
+</html>

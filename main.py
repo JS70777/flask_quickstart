@@ -15,5 +15,9 @@ def idle():
 def assignment():
     return render_template('assign.html')
 
+@app.route('/middlefield')
+def middlefield():
+    return render_template('middlefield.html')
+
 if __name__ == '__main__':
     app.run(debug=True)
